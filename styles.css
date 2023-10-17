@@ -1,0 +1,97 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: #25212f;
+    --main-accent-color: #ddf178;
+    --hover-color: #444a59;
+    --sequence-color: white;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.main-container {
+    background-color: var(--main-bg-color);
+    width: 99vw;
+    height: 97vh;
+    border: var(--main-accent-color) 5px dotted;
+    display: flex;
+    
+}
+
+.matrix-container {
+    display: flex;
+    justify-content: center;
+
+    width: 70vw;
+    margin: 1rem;
+    
+    border: var(--main-accent-color) 3px solid;
+}
+
+.matrix {
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+
+
+    align-items: center;
+    justify-items: center;
+    
+
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    margin: 2rem 0;
+
+
+    border: solid red 1px;
+}
+
+.sequence-container {
+    width: 25vw;
+    height: 60%;
+    margin: 1rem 1rem 1rem 0;
+    border: var(--main-accent-color) 3px solid;
+}
+
+.matrix-node {
+    color: var(--main-accent-color);
+    width: 4rem;
+    aspect-ratio: 1 / 1;
+    
+    text-align: center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5rem;
+
+
+    /* border: 1px dotted cyan; */
+}
+
+.active {
+    background-color: var(--hover-color);
+    width: 100%;
+    height: 100%;
+}
+
+.next-active {
+    background-color: lightblue;
+    width: 100%;
+    height: 100%;
+}
+
+
+.selected {
+    border: pink 2px solid;
+}
+
+.matrix-node:hover {
+    border: var(--main-accent-color) 2px solid;
+}
